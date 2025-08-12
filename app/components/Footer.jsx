@@ -7,10 +7,10 @@ function Footer() {
   const { smallscreen } = hooks();
 
   return (
-    <div className={`bg-gray-800 text-white text-center ${smallscreen ? 'flex-col' : '  p-[1vh] '}`}>
-      <div className='p-[2vw]'>
-        <h2 className="text-lg font-bold">Mvula Tours</h2>
-        <p className="text-sm">Your gateway to unforgettable travel experiences.</p>
+    <div className={`bg-[#000000] text-white text-center ${smallscreen ? 'flex-col' : '  p-[1vh] '}`}>
+      <div className='p-[2vw]  items-center justify-center flex flex-col'>
+        <img className='mt-[-2vh]' src='/logo/logo2.png' width='200vw' height='' />
+        <p className="text-sm mt-[0vh]">Your gateway to unforgettable travel experiences.</p>
       </div>
       <div>
         <ul className={` border-t-2 border-b-2 border-gray-600 pb-[1vw] pt-[1vw] pl-[1vw] w-[50%] space-x-4 mt-2 
