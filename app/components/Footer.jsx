@@ -1,10 +1,15 @@
 import React from 'react';
 import { hooks } from '../hooks/Hooks';
-
+import { useRouter } from "next/navigation";
 
 function Footer() {
 
   const { smallscreen } = hooks();
+    const router = useRouter();
+  
+    const goToForm = (formNumber) => {
+      router.push(`/booking?form=${formNumber}`);
+    };
 
   return (
     <div className={`bg-[#000000] text-white text-center ${smallscreen ? 'flex-col' : '  p-[1vh] '}`}>
@@ -17,7 +22,7 @@ function Footer() {
           ${smallscreen ? 'w-full' : 'flex justify-center  absolute left-0 '}`}>
           <li><a href="/" className="text-gray-400">Privacy Policy</a></li>
           <li className="inline-block mx-2"><a href="/" className="text-gray-400">Terms of Service</a></li>
-          <li className="inline-block mx-2"><a href="/" className="text-gray-400">Contact Us</a></li>
+          <li className="inline-block mx-2"><a href="contact/contact" className="text-gray-400">Contact Us</a></li>
         </ul>
         <ul className={` border-t-2 border-b-2 border-gray-600 pb-[1vw] pt-[1vw] pl-[1vw] w-[50%] space-x-4 mt-2 
           ${smallscreen ? 'w-full' : 'flex justify-center  absolute right-0 '}`}>
@@ -42,9 +47,8 @@ function Footer() {
         </ul>
         <ul className={`right-0 pl-[1vw] ${smallscreen ? 'w-full' : 'w-[50%]'}`}>
           <li>Plan your trip:</li>
-          <li><a href="/" className="text-gray-400 ">Group Booking</a></li>
-          <li><a href="/" className="text-gray-400 ">Couple Booking</a></li>
-          <li><a href="/" className="text-gray-400 ">Family Booking</a></li>
+          <li className='cursor-pointer'><a onClick={() => goToForm(1)} className="text-gray-400 ">Couple Booking</a></li>
+          <li className='cursor-pointer'><a onClick={() => goToForm(1)} className="text-gray-400 ">Family Booking</a></li>
         </ul>
       </div>
     </div>

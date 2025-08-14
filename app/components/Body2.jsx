@@ -27,7 +27,7 @@ function Body(){
                 </div>
                 <div className="pt-[2vh] text-center">
                     <h1 className="text-xl font-bold border-t pt-[2vh]">Join us for an unforgettable journey.</h1>
-                    <p className="text-lg pt-[2vh] ">Want to join one of our hosted adventures? 
+                    <p className="text-lg pt-[2vh] p-2 ">Want to join one of our hosted adventures? 
                         <a  onClick={() => goToForm(2)} className="text-blue-500 underline cursor-pointer text-2xl"> Click here</a> to travel with us.</p>
                     <p className="text-lg pt-[2vh] w-[90%] mx-auto">You can also join one of our exciting hosted trips, where everything is planned for you from start to finish. Each itinerary includes the best destinations, comfortable stays, and unforgettable activities. All you need to do is pack your bags and enjoy. Whether it’s a scenic getaway, cultural exploration, or fun group holiday, our trips let you meet new people, share experiences, and make memories without the stress of planning.</p>
                 </div>
