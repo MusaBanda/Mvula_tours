@@ -3,7 +3,7 @@
 function Body() {
   return (
    
-    <div className='min-h-screen'  style={{backgroundImage:"url('/bgs/hike.jpeg')",backgroundSize: "cover", backgroundPosition: "center"}}>
+    <div className='min-h-80%'  style={{backgroundImage:"url('/bgs/hike.jpeg')",backgroundSize: "cover", backgroundPosition: "center"}}>
     
         <div className={`items-center justify-center flex min-h-40`}>
           <div className={`border border-black flex items-center justify-center text-black pt-[2vh] h-[10vh]

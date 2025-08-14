@@ -17,6 +17,9 @@ const IMGS = [
   '/gallery/G (7).jpg',
   '/gallery/G (8).jpg',
   '/gallery/G (9).jpg',
+  '/gallery/G (10).jpg',
+  '/gallery/G (11).jpg',
+  '/gallery/G (12).jpg',
 ];
 
 const RollingGallery = ({
@@ -39,8 +42,8 @@ const RollingGallery = ({
 
   const cylinderWidth = isScreenSizeSm ? 1100 : 1800;
   const faceCount = images.length;
-  const faceWidth = (cylinderWidth / faceCount) * 2.4;
-  const radius = cylinderWidth / (1.5 * Math.PI);
+  const faceWidth = (cylinderWidth / faceCount) * 3.3;
+  const radius = cylinderWidth / (1.4 * Math.PI);
 
   const dragFactor = 0.05;
   const rotation = useMotionValue(0);
@@ -140,7 +143,7 @@ const RollingGallery = ({
               <img
                 src={url}
                 alt="gallery"
-                className="pointer-events-none h-[50vh] w-[50vw] rounded-[15px] border-[3px] border-black object-cover
+                className="pointer-events-none h-[40vh] lg:w-[15vw] rounded-[15px] border-[3px] border-black object-cover
                            transition-transform duration-300 ease-out group-hover:scale-105"
               />
             </div>

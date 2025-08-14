@@ -9,7 +9,7 @@ function Footer() {
   return (
     <div className={`bg-[#000000] text-white text-center ${smallscreen ? 'flex-col' : '  p-[1vh] '}`}>
       <div className='p-[2vw]  items-center justify-center flex flex-col'>
-        <img className='mt-[-2vh]' src='/logo/logo2.png' width='200vw' height='' />
+        <img className='mt-[0vh]' src='/logo/logo2.png' width='200vw' height='' />
         <p className="text-sm mt-[0vh]">Your gateway to unforgettable travel experiences.</p>
       </div>
       <div>
@@ -32,8 +32,8 @@ function Footer() {
       <div className='flex justify-start  p-[1vh]'>
         <ul className={`left-0 pl-[1vw] ${smallscreen ? 'w-full' : 'w-[50%]'}`}>
           <li>Need Help ?</li>
-          <li><a href="/" className="text-gray-400 ">FAQ</a></li>
-          <li><a href="/" className="text-gray-400 ">Support</a></li>
+          <li><a href="contact/faq" className="text-gray-400 ">FAQ</a></li>
+          <li><a href="contact/contact" className="text-gray-400 ">Support</a></li>
         </ul>
         <ul className={`right-0 pl-[1vw] ${smallscreen ? 'w-full' : 'w-[50%]'}`}>
           <li>Contact Us:</li>
