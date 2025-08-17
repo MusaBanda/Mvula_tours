@@ -3,6 +3,25 @@ import { useState, useEffect } from 'react';
 
 export const hooks = () => {
 
+// Loading state
+function usePageLoaded() {
+  const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    const handleLoad = () => setLoaded(true);
+
+    if (document.readyState === "complete") {
+      setLoaded(true);
+    } else {
+      window.addEventListener("load", handleLoad);
+      return () => window.removeEventListener("load", handleLoad);
+    }
+  }, []);
+
+  return loaded;
+}
+const isLoaded = usePageLoaded();
+
   // classes for small and large screen
 const [smallscreen, setsmallscreen] = useState(false); // safe default
 
@@ -63,6 +82,7 @@ useEffect(() => {
   return {
    smallscreen, 
    LScreen, SScreen,
-   onSubmit, result
+   onSubmit, result,
+   isLoaded
   };
 };

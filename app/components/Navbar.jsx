@@ -17,11 +17,11 @@ function Navbar() {
             <img className={` ${smallscreen ? 'mx-auto flex mt-[-1vh]' : 'mt-[-6vh] absolute left-3 '} `}
             src='logo/logo2.png' width='200vw' />
             <ul className={`
-              ${smallscreen ? 'mt-9 text-center text-[2vh] flex space-x-4' : 'flex space-x-4 border-r-2 border-l-2 border-gray-600 pr-4 pl-4'}`}>
-                <li><a className='cursor-pointer' onClick={() => goToForm(2)}>Upcoming Tours</a></li>
-                <li><a className='cursor-pointer border-l-2 border-gray-600 pl-4' href="#Body3">About Us</a></li>
+              ${smallscreen ? 'mt-9 text-center text-[1.5vh] flex space-x-4' : 'flex space-x-4 border-r-2 border-l-2 border-gray-600 pr-4 pl-4'}`}>
+                <li><a className='cursor-pointer' onClick={() => goToForm(2)}>Upcoming_Tours</a></li>
+                <li><a className='cursor-pointer border-l-2 border-gray-600 pl-4' href="#Body3">About_Us</a></li>
                 <li><a className='cursor-pointer border-l-2 border-gray-600 pl-4' href="gallery">Gallery</a></li>
-                <li><a className='cursor-pointer border-l-2 border-gray-600 pl-4' href="contact/contact">Contact Us</a></li>
+                <li><a className='cursor-pointer border-l-2 border-gray-600 pl-4' href="contact/contact">Contact_Us</a></li>
             </ul>
         </div>
     </div>
