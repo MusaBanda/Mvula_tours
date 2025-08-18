@@ -1,29 +1,36 @@
 "use client";
-import { useSearchParams } from "next/navigation";
+import { useSearchParams,  useRouter  } from "next/navigation";
 import {hooks} from '../hooks/Hooks';
 
+
 export default function BooPage() {
+
   const searchParams = useSearchParams();
   const form = searchParams.get("form") || "1";
   const { onSubmit, result } = hooks();
 
+  const router = useRouter();
+  const goToForm = (formNumber) => {
+    router.push(`/booking?form=${formNumber}`);
+  };
+
   return (
-    <div className="bg-gradient-to-b from-gray-800 to-white-300 ">
+    <div className="bg-gradient-to-b from-gray-800 to-white-300 " style={{backgroundImage: "url('bgs/waterfall.webp')", backgroundSize: 'cover'}}> 
       {form === "1" && (
-        <div>
-          <div>
+        <div style={{backdropFilter: 'blur(5px)', backgroundColor: 'rgba(0, 0, 0, 0.4)'}}> 
+          <div className="text-white">
             <h1 className="text-center text-2xl font-bold">Tell us about your perfect trip! Where you would like go, who would you travel with, and what experiences would make it unforgettable?</h1>
             <h1 className="text-center text-1xl font-bold">If you want to join us for our own hosted trip
-              <a className="text-blue-500 cursor-pointer" onClick={() => goToForm(2)}> click here</a>. Trust us for an unforgettable experience!</h1>
+              <a className="text-green-500 cursor-pointer active:text-amber-300" onClick={() => goToForm(2)}> click here</a>. Trust us for an unforgettable experience!</h1>
           </div>
           <div className="flex items-center justify-center min-h-screen ">
-            <form onSubmit={onSubmit} className="flex flex-col gap-[2vh] w-[80%]  border border-black p-[5vh] rounded-2xl ">
-                <input className="border-b placeholder:text-center" name="name" type="text" placeholder="Name" required/>
-                <input className="border-b placeholder:text-center" name="surname" type="text" placeholder="Surname" />
-                <input className="border-b placeholder:text-center" name="email" type="text" placeholder="Email" required />
-                <input className="border-b placeholder:text-center" name="phone" type="text" placeholder="Phone" required/>
-                <input className="border-b placeholder:text-center" name="location" type="text" placeholder="Location full address"  required/>
-                <select name="tripType" className="border-b">
+            <form onSubmit={onSubmit} className="flex flex-col gap-[2vh] w-[80%]  border border-white p-[5vh] rounded-2xl ">
+                <input className="border-b-2 border-white placeholder:text-center placeholder:text-white" name="name" type="text" placeholder="Name" required/>
+                <input className="border-b-2 border-white placeholder:text-center placeholder:text-white" name="surname" type="text" placeholder="Surname" />
+                <input className="border-b-2 border-white placeholder:text-center placeholder:text-white" name="email" type="text" placeholder="Email" required />
+                <input className="border-b-2 border-white placeholder:text-center placeholder:text-white" name="phone" type="text" placeholder="Phone" required/>
+                <input className="border-b-2 border-white placeholder:text-center placeholder:text-white" name="location" type="text" placeholder="Location full address"  required/>
+                <select name="tripType" className="border-b-2 border-white text-white">
                     <option value="">Select</option>
                     <option value="solo">Solo trip</option>
                     <option value="family">Family trip</option>
@@ -31,11 +38,11 @@ export default function BooPage() {
                     <option value="couples">Couples trip</option>
                 </select>
 
-                <textarea className="border h-[30vh] placeholder:text-center rounded-[2%]" name="description" 
+                <textarea className="border-2 border-white h-[30vh] placeholder:text-center  placeholder:text-white rounded-xl" name="description" 
                 placeholder="Full Description of what you have in mind " required></textarea>
                 <div className="flex items-center justify-center gap-2">
-                    <button className="bg-blue-500 text-white py-2 w-[40vw] rounded" type="submit">Submit</button>
-                    <button className="bg-gray-300 text-black py-2 w-[40vw] rounded" type="button">Cancel</button>
+                    <button className="bg-blue-500 active:bg-amber-300 text-white py-2 w-[40vw] rounded" type="submit">Submit</button>
+                    <button className="bg-gray-300 active:bg-amber-300 text-black py-2 w-[40vw] rounded" type="button">Cancel</button>
                 </div>
                 <p>{result}</p>
             </form>  

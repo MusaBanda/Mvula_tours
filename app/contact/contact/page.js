@@ -1,5 +1,6 @@
 'use client'
 import { hooks } from '@/app/hooks/Hooks';
+import Image from 'next/image';
 
 
 function Contact(){

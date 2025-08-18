@@ -1,5 +1,6 @@
 'use client'
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 function FAQ() {
 
@@ -13,7 +14,7 @@ function FAQ() {
   return (
     <div>
       <div className="flex justify-center bg-black">
-        <img src="/logo/logo1.png" width="200vw" alt="logo" />
+        <Image width={200} height={200} src="/logo/logo1.png" alt="logo" />
       </div>
       <div>
         <h1 className="p-1 h-[5vh] bg-gray-200">Frequently Asked Questions</h1>
@@ -28,7 +29,7 @@ function FAQ() {
         <details className="mb-4 border-b ">
           <summary>What services do you offer?</summary>
           <p className="bg-gray-200 p-10">We offer a variety of services including flight bookings, hotel reservations, and customized tour packages.
-            <p>For more information<a className="text-blue-500 text-2xl" href="/"> Click here</a>.</p>
+            <p>For more information<link className="text-blue-500 text-2xl" href="/"> Click here</link>.</p>
           </p>
         </details>
 

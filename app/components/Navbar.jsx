@@ -2,6 +2,7 @@
 import React from 'react';
 import { hooks } from '../hooks/Hooks';
 import { useRouter } from "next/navigation";
+import Image from 'next/image';
 
 function Navbar() {
   const { smallscreen } = hooks();
@@ -14,8 +15,8 @@ function Navbar() {
   return (
     <div className={`bg-[#000000] text-white items-center flex justify-center p-4 `}>
         <div className={` ${smallscreen ? 'h-[21vh]' : ' h-[7vh] mt-[3vh]'}`}> 
-            <img className={` ${smallscreen ? 'mx-auto flex mt-[-1vh]' : 'mt-[-6vh] absolute left-3 '} `}
-            src='logo/logo2.png' width='200vw' />
+            <Image className={`${smallscreen ? 'mx-auto flex mt-[-1vh]' : 'mt-[-6vh] absolute left-3 '} `}
+            src="/logo/logo2.png" width={200} height={100} alt='logo' />
             <ul className={`
               ${smallscreen ? 'mt-9 text-center text-[1.5vh] flex space-x-4' : 'flex space-x-4 border-r-2 border-l-2 border-gray-600 pr-4 pl-4'}`}>
                 <li><a className='cursor-pointer' onClick={() => goToForm(2)}>Upcoming_Tours</a></li>

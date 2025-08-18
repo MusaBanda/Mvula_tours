@@ -1,11 +1,12 @@
 'use client'
 import RollingGallery from '../hooks/RollingGallery'
+import Image from 'next/image';
   
 function Gallery(){
     return(
         <div style={{backgroundImage:"url('/bgs/ship.png')",  backgroundSize: "cover", backgroundPosition: "center", }}>
             <div className='items-center justify-center flex'>
-                <img src='/logo/logo1.png'/>
+                <Image src='/logo/logo1.png' width={400} height={400} alt="Logo" />
             </div>
             <div>
                 <RollingGallery autoplay={true} pauseOnHover={false} />

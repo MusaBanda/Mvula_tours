@@ -1,6 +1,7 @@
 import React from 'react';
 import { hooks } from '../hooks/Hooks';
 import { useRouter } from "next/navigation";
+import Image from 'next/image';
 
 function Footer() {
 
@@ -14,7 +15,7 @@ function Footer() {
   return (
     <div className={`bg-[#000000] text-white text-center ${smallscreen ? 'flex-col' : '  p-[1vh] '}`}>
       <div className='p-[2vw]  items-center justify-center flex flex-col'>
-        <img className='mt-[0vh]' src='/logo/logo2.png' width='200vw' height='' />
+        <Image className='mt-[0vh]' src='/logo/logo2.png' width={200} height={100} alt='logo' />
         <p className="text-sm mt-[0vh]">Your gateway to unforgettable travel experiences.</p>
       </div>
       <div>

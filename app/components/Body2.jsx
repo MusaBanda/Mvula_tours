@@ -2,6 +2,7 @@
 import { useRouter } from "next/navigation";
 import {hooks, smallscreen} from '../hooks/Hooks';
 import {ovo} from '../layout'
+import Image from 'next/image';
 
 function Body(){
 
@@ -36,16 +37,16 @@ function Body(){
                 </div>
             </div>
 
-            <div className="bg-gray-300 min-h-[70vh]"> 
+            <div className="bg-gray-300 min-h-[60vh]"> 
                <div className={`flex flex-col-2 items-center justify-center h-full relative  `}>
-                    <img src="/bgs/plane.png" alt="Hero Image" className={`top-0  ${smallscreen ? 'w-[50vw] mt-[9vh]':''}`} />
-                    <img src="/bgs/fam.png" alt="Hero Image" className={`mt-4 ${smallscreen ? 'w-[40vw] h-[25vh] mt-[9vh]':''}`} />
+                    <Image src="/bgs/plane.png" width={500} height={300} alt="Hero Image" className={`top-0  ${smallscreen ? 'w-[50vw] mt-[9vh]':''}`} />
+                    <Image src="/bgs/fam.png" width={500} height={300} alt="Hero Image" className={`mt-4 ${smallscreen ? 'w-[40vw] h-[25vh] mt-[9vh]':''}`} />
                </div>
-                <div className={`absolute right-0  ${smallscreen ? 'mt-[-4vh] mr-2 ml-[40%]':'mt-[-20vh] mr-10 ml-[50%]'}`} >
+                <div className={`absolute right-0  ${smallscreen ? 'mt-[-4vh] mr-2 ml-[40%]':'mt-[-15vh] mr-10 ml-[40%]'}`} >
                     <p>Experience the beauty of the world with Mvula Tours, where every journey is crafted to showcase the world’s breathtaking landscapes, vibrant culture, and unforgettable adventures❤️.</p>
                 </div>
                 <div className={`${smallscreen ? 'absolute left-[-20%] ':'hidden'}`} >
-                    <img src="/logo/logo1.png" width={300} />
+                    <Image src="/logo/logo1.png" width={300} height={300} alt="Logo" />
                 </div>
 
             </div>

@@ -28,8 +28,8 @@ function Body() {
           style={{ backdropFilter: "blur(3px)" ,backgroundColor: "rgba(0, 0, 0, 0.5)"  }}>
             <h2 className="text-xl font-bold mb-2">Why We're the Best in SA</h2>
             <p>
-              Our team blends local knowledge with world-class service. Mvula Tours offers unbeatable pricing, custom packages,
-              and 24/7 support — making us the top choice for travelers seeking unforgettable South African adventures.
+              Our team blends local knowledge with world-class service. Mvula_Tours offers unbeatable pricing, custom packages,
+              and 24/7 support making us the top choice for travelers seeking unforgettable South African adventures.
             </p>
         </div>
       </div>

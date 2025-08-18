@@ -6,6 +6,8 @@ import {
   useAnimation,
   useTransform,
 } from "motion/react";
+import Image from 'next/image';
+
 
 const IMGS = [
   '/gallery/G (1).jpg',
@@ -107,12 +109,7 @@ const RollingGallery = ({
   return (
     <div
       className="relative h-screen w-full overflow-hidden flex items-center justify-center"
-      style={{
-        
-        backgroundSize: "cover",
-        backgroundPosition: "center"
-      }}
-    >
+      style={{ backgroundSize: "cover", backgroundPosition: "center"  }} >
       <div className="flex h-full items-center justify-center [perspective:1000px] [transform-style:preserve-3d]">
         <motion.div
           drag="x"
@@ -140,12 +137,9 @@ const RollingGallery = ({
                 transform: `rotateY(${(360 / faceCount) * i}deg) translateZ(${radius}px)`,
               }}
             >
-              <img
-                src={url}
-                alt="gallery"
+              <Image width={500} height={500} src={url} alt="gallery"
                 className="pointer-events-none h-[40vh] lg:w-[15vw] rounded-[15px] border-[3px] border-black object-cover
-                           transition-transform duration-300 ease-out group-hover:scale-105"
-              />
+                           transition-transform duration-300 ease-out group-hover:scale-105" />
             </div>
           ))}
         </motion.div>
