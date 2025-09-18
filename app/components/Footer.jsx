@@ -21,16 +21,16 @@ function Footer() {
       <div>
         <ul className={` border-t-2 border-b-2 border-gray-600 pb-[1vw] pt-[1vw] pl-[1vw] w-[50%] space-x-4 mt-2 
           ${smallscreen ? 'w-full' : 'flex justify-center  absolute left-0 '}`}>
-          <li><a href="/" className="text-gray-400">Privacy Policy</a></li>
-          <li className="inline-block mx-2"><a href="/" className="text-gray-400">Terms of Service</a></li>
-          <li className="inline-block mx-2"><a href="contact/contact" className="text-gray-400">Contact Us</a></li>
+          <li><a href="/" className="text-gray-400 active:text-red-700">Privacy Policy</a></li>
+          <li className="inline-block mx-2"><a href="/" className="text-gray-400 active:text-red-700">Terms of Service</a></li>
+          <li className="inline-block mx-2"><a href="contact/contact" className="text-gray-400 active:text-red-700">Contact Us</a></li>
         </ul>
         <ul className={` border-t-2 border-b-2 border-gray-600 pb-[1vw] pt-[1vw] pl-[1vw] w-[50%] space-x-4 mt-2 
           ${smallscreen ? 'w-full' : 'flex justify-center  absolute right-0 '}`}>
           <li className="">Follow us on:</li>
-          <li className="inline-block mx-2"><a href="/" className="text-gray-400">Facebook</a></li>
-          <li className="inline-block mx-2"><a href="/" className="text-gray-400">Twitter</a></li>
-          <li className="inline-block mx-2"><a href="/" className="text-gray-400">Instagram</a></li>
+          <li className="inline-block mx-2"><a href="https://www.facebook.com/mosa.banda.9" className="text-gray-400 active:text-red-700">Facebook</a></li>
+          <li className="inline-block mx-2"><a href="/" className="text-gray-400 active:text-red-700">Twitter</a></li>
+          <li className="inline-block mx-2"><a href="/" className="text-gray-400 active:text-red-700">Instagram</a></li>
         </ul>
       </div>
       <p className={` ${smallscreen ? 'pt-[5vh]' : 'pt-[13vh]'}`}
@@ -38,18 +38,18 @@ function Footer() {
       <div className='flex justify-start  p-[1vh]'>
         <ul className={`left-0 pl-[1vw] ${smallscreen ? 'w-full' : 'w-[50%]'}`}>
           <li>Need Help ?</li>
-          <li><a href="contact/faq" className="text-gray-400 ">FAQ</a></li>
-          <li><a href="contact/contact" className="text-gray-400 ">Support</a></li>
+          <li><a href="contact/faq" className="text-gray-400 active:text-red-700 ">FAQ</a></li>
+          <li><a href="contact/contact" className="text-gray-400 active:text-red-700 ">Support</a></li>
         </ul>
         <ul className={`right-0 pl-[1vw] ${smallscreen ? 'w-full' : 'w-[50%]'}`}>
           <li>Contact Us:</li>
-          <li><a href="/" className="text-gray-400 ">Email: info@mvula.com</a></li>
-          <li><a href="/" className="text-gray-400 ">Phone: +123456789</a></li>
+          <li><a href="/" className="text-gray-400 active:text-red-700 ">Email: info@mvula.com</a></li>
+          <li><a href="/" className="text-gray-400 active:text-red-700 ">Phone: +123456789</a></li>
         </ul>
         <ul className={`right-0 pl-[1vw] ${smallscreen ? 'w-full' : 'w-[50%]'}`}>
           <li>Plan your trip:</li>
-          <li className='cursor-pointer'><a onClick={() => goToForm(1)} className="text-gray-400 ">Couple Booking</a></li>
-          <li className='cursor-pointer'><a onClick={() => goToForm(1)} className="text-gray-400 ">Family Booking</a></li>
+          <li className='cursor-pointer'><a onClick={() => goToForm(1)} className="text-gray-400 active:text-red-700 ">Couple Booking</a></li>
+          <li className='cursor-pointer'><a onClick={() => goToForm(1)} className="text-gray-400 active:text-red-700 ">Family Booking</a></li>
         </ul>
       </div>
     </div>

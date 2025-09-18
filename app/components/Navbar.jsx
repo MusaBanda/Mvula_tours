@@ -19,10 +19,10 @@ function Navbar() {
             src="/logo/logo2.png" width={200} height={100} alt='logo' />
             <ul className={`
               ${smallscreen ? 'mt-9 text-center text-[1.5vh] flex space-x-4' : 'flex space-x-4 border-r-2 border-l-2 border-gray-600 pr-4 pl-4'}`}>
-                <li><a className='cursor-pointer' onClick={() => goToForm(2)}>Upcoming_Tours</a></li>
-                <li><a className='cursor-pointer border-l-2 border-gray-600 pl-4' href="#Body3">About_Us</a></li>
-                <li><a className='cursor-pointer border-l-2 border-gray-600 pl-4' href="gallery">Gallery</a></li>
-                <li><a className='cursor-pointer border-l-2 border-gray-600 pl-4' href="contact/contact">Contact_Us</a></li>
+                <li><a className='cursor-pointer active:text-red-700' onClick={() => goToForm(2)}>Upcoming_Tours</a></li>
+                <li><a className='cursor-pointer active:text-red-700 border-l-2 border-gray-600 pl-4' href="#Body3">About_Us</a></li>
+                <li><a className='cursor-pointer active:text-red-700 border-l-2 border-gray-600 pl-4' href="gallery">Gallery</a></li>
+                <li><a className='cursor-pointer active:text-red-700 border-l-2 border-gray-600 pl-4' href="contact/contact">Contact_Us</a></li>
             </ul>
         </div>
     </div>

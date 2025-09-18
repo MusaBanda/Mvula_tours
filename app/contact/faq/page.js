@@ -1,6 +1,7 @@
 'use client'
 import { useRouter } from "next/navigation";
 import Image from "next/image";
+import Link from "next/link";
 
 function FAQ() {
 
@@ -29,7 +30,7 @@ function FAQ() {
         <details className="mb-4 border-b ">
           <summary>What services do you offer?</summary>
           <p className="bg-gray-200 p-10">We offer a variety of services including flight bookings, hotel reservations, and customized tour packages.
-            <p>For more information<link className="text-blue-500 text-2xl" href="/"> Click here</link>.</p>
+            <p>For more information<Link className="text-blue-500 text-2xl" href="/"> Click here</Link>.</p>
           </p>
         </details>
 

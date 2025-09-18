@@ -1,15 +1,25 @@
+import { hooks } from "../hooks/Hooks";
 
 
 function Body() {
+
+  const { smallscreen } = hooks();
+
   return (
    
     <div className='min-h-80%'  style={{backgroundImage:"url('/bgs/hike.jpeg')",backgroundSize: "cover", backgroundPosition: "center"}}>
     
         <div className={`items-center justify-center flex min-h-40`}>
-          <div className={`text-white pt-[2vh] h-[10vh]
-            w-[90%] px-4 rounded-xl`} style={{ backdropFilter: "blur(3px)", backgroundColor: "rgba(0, 0, 0, 0.5)" }}>
-            <h1 className="text-center p-1">New members features coming soon!</h1>
+          <div className={`text-white rounded-2xl p-2 w-[90%]  flex mt-5  ${smallscreen ? ' items-center justify-center flex-col' : ''}`} style={{ backdropFilter: "blur(3px)" ,backgroundColor: "rgba(0, 0, 0, 0.5)"  }}>
+            <div className=" ml-[2vw] text-2xl">
+              <h1 className="text-center p-1">Upgrade Your Experience</h1>
+              <h1 className="text-center p-1">Get exclusive member-only deals, early access and so much more!</h1>
+            </div>
+            <div className={` ${smallscreen ? '' : 'items-center justify-center flex ml-[8vw] mr-[8vw] '}`}>
+              <h1 className="border text-center bg-pink-600 rounded-3xl w-[200px] p-2">learn more!</h1>
+            </div>
           </div>
+          
         </div>
       
       <div className="flex flex-wrap justify-center gap-6 w-full px-4 py-6">
