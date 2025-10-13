@@ -43,7 +43,7 @@ return(
             style={{ backgroundColor: "rgba(0, 0, 0, 0.4)", backdropFilter: "blur(2px)"}}>
                 <h1>Mvula-tours</h1>
                 <p>mvulatours@gmail.com</p>
-                <p>+27 34567890</p>
+                <p>+27 345678900</p>
             </div>
             <div className='border h-[40vh] w-[80vw] flex items-center justify-center rounded-2xl'
             style={{ backgroundColor: "rgba(0, 0, 0, 0.4)", backdropFilter: "blur(2px)"}}>
