@@ -48,8 +48,8 @@ return(
             <div className='border h-[40vh] w-[80vw] flex items-center justify-center rounded-2xl'
             style={{ backgroundColor: "rgba(0, 0, 0, 0.4)", backdropFilter: "blur(2px)"}}>
               <form onSubmit={onSubmit} className="w-[80%] flex flex-col ">
-                  <input  type="text" placeholder='NAME' 
-                     className="border border-gray-400 p-2 h-[5vh] w-[60vw] rounded required:" />
+                  <input  type="text" placeholder='NAME' required
+                     className="border border-gray-400 p-2 h-[5vh] w-[60vw] rounded " />
                   <input type="email" placeholder='Email'
                      className="border border-gray-400 p-2 h-[5vh] w-[60vw] rounded" required/>
                    <textarea placeholder="Your message" required

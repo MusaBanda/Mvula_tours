@@ -52,7 +52,7 @@ function Body(){
             </div>
 
              <div className="min-h-[50vh]"> 
-
+                
             </div>
 
         </div>

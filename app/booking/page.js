@@ -63,20 +63,44 @@ export default function BooPage() {
             </video>
           </div>
 
-          <div className="p-4">
-            <p className="text-center" >For more information about our trips, feel free to contact us!</p>
-             <details className="mb-4 border-b">
-              <summary className="text-center text-2xl">Interested? book your space now</summary>
-               <form className="bg-gray-400 flex flex-col items-center p-4 gap-5 rounded" onSubmit={onSubmit}>
-                <input className="border-b border-black placeholder:text-black " type="text" placeholder="Name" required />
-                <input className="border-b border-black placeholder:text-black " type="email" placeholder="Email" required />
-                <input className="border-b border-black placeholder:text-black " type="text" placeholder="Phone" required />
-                <input className="border-b border-black placeholder:text-black " type="text" placeholder="where do you stay" required />
-                <input className="border-b border-black placeholder:text-black " type="text" placeholder="How many individuals" />
-                <p>{result}</p>
-                <button className="bg-blue-500 text-white p-2 mt-2 w-full rounded" type="submit">Book Now</button>
-               </form>
-              </details>
+         <div className="p-4">
+            <p className="text-center">
+              For more information about our trips, feel free to contact us!
+            </p>
+
+            <details className="mb-4 border-b">
+              <summary className="text-center text-2xl cursor-pointer">
+                Interested? Book your space now
+              </summary>
+
+              <form className="bg-gray-400 flex flex-col items-center p-4 gap-5 rounded" onSubmit={onSubmit}>
+                <input className="border-b border-black placeholder:text-black w-full max-w-md"
+                  type="text" placeholder="Name"  required  />
+                <input  className="border-b border-black placeholder:text-black w-full max-w-md"
+                  type="email"  placeholder="Email" required  />
+                <input  className="border-b border-black placeholder:text-black w-full max-w-md"
+                  type="text" placeholder="Phone" required  />
+                <input  className="border-b border-black placeholder:text-black w-full max-w-md"
+                  type="text" placeholder="Where do you stay" required  />
+                <input  className="border-b border-black placeholder:text-black w-full max-w-md"
+                  type="text" placeholder="How many individuals" required  />
+
+                <div className="flex flex-col w-full max-w-md gap-4 mt-4">
+                  <button className="bg-blue-500 text-white p-2 rounded hover:bg-blue-600"
+                    type="submit"> Book Only </button>
+                  <p className="text-center text-sm">
+                    (No deposit required) — Space not guaranteed until payment is made.
+                  </p>
+
+                  <a className="bg-green-500 text-white p-2 rounded hover:bg-green-600 text-center"
+                   href="pay"> Book & Pay Deposit  </a>
+                  <p className="text-center text-sm">
+                    Space 100% guaranteed after deposit.
+                  </p>
+                </div>
+                 <p className="text-center font-semibold">{result}</p>
+              </form>
+            </details>
           </div>
         </div>
       )}
